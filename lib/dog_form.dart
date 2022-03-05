@@ -2,24 +2,24 @@ import 'package:flutter/material.dart';
 
 import 'dog_model.dart';
 
-class AddDogFormPage extends StatefulWidget {
+class DogForm extends StatefulWidget {
   @override
-  _AddDogFormPageState createState() => new _AddDogFormPageState();
+  _AddDogFormPageState createState() =>  _AddDogFormPageState();
 }
 
-class _AddDogFormPageState extends State<AddDogFormPage> {
-  TextEditingController nameController = new TextEditingController();
-  TextEditingController locationController = new TextEditingController();
-  TextEditingController descriptionController = new TextEditingController();
+class _AddDogFormPageState extends State<DogForm> {
+  TextEditingController nameController =  TextEditingController();
+  TextEditingController locationController =  TextEditingController();
+  TextEditingController descriptionController =  TextEditingController();
 
   void submitPup(context) {
     if (nameController.text.isEmpty) {
       Scaffold.of(context).showSnackBar(
-             SnackBar(
-              backgroundColor: Colors.redAccent,
-              content: new Text('Pups neeed names!'),
-            ),
-          );
+        const SnackBar(
+          backgroundColor: Colors.black,
+          content: Text('Pups neeed names!', style: TextStyle(color: Colors.white)),
+        ),
+      );
     } else {
       var newDog =  Dog(nameController.text, locationController.text,
           descriptionController.text);
@@ -29,51 +29,57 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Add a new Dog'),
-        backgroundColor: Colors.black87,
+    return  Scaffold(
+      backgroundColor:Colors.white,
+      appBar:  AppBar(
+        title: const Text('Add a new Dog',style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
       ),
-      body: new Container(
-        color: Colors.black54,
-        child: new Padding(
+      body:  Container(
+        color: Colors.grey,
+        child:  Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 8.0,
             horizontal: 32.0,
           ),
-          child: new Column(
+          child:  Column(
             children: [
-              new Padding(
+               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: new TextField(
+                child:  TextField(
                     controller: nameController,
-                    decoration: new InputDecoration(
+                    decoration: const InputDecoration(
+
                       labelText: 'Name the Pup',
                     )),
               ),
-              new Padding(
+               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: new TextField(
+                child:  TextField(
                     controller: locationController,
-                    decoration: new InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: "Pups location",
                     )),
               ),
-              new Padding(
+               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: new TextField(
+                child:  TextField(
                     controller: descriptionController,
-                    decoration: new InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'All about the pup',
                     )),
               ),
-              new Padding(
+               const SizedBox(
+                 height:350,
+               ),
+               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: new Builder(
+                child:  Builder(
                   builder: (context) {
-                    return new RaisedButton(
+                    return  RaisedButton(
                       color: Colors.indigoAccent,
-                      child: new Text('Submit Pup'),
+                      child: const Text('Submit '),
                       onPressed: () => submitPup(context),
                     );
                   },
