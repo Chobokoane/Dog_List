@@ -94,7 +94,7 @@ class _HomeView extends State<HomeView> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return const FormWidget();
+            return  FormWidget();
           }));
         },
         child: const Icon(Icons.add, color: widgetBgColor, size: 29,),

@@ -13,7 +13,7 @@ class MyRouter {
         var dogDto = settings.arguments as DogModel;
         return MaterialPageRoute(builder: (_) => DetailPage(dogDto));
       case "form":
-        return MaterialPageRoute(builder: (_) => const FormWidget());
+        return MaterialPageRoute(builder: (_) =>  FormWidget());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

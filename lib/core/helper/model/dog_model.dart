@@ -3,11 +3,12 @@ import 'dart:convert';
 
 import 'dart:io';
 
+import 'package:logger/logger.dart';
+
 class DogModel {
   final String name;
   final String description;
   String ?imageUrl;
-  int rating = 10;
 
   DogModel(this.name,this.description);
 
@@ -24,11 +25,13 @@ class DogModel {
       var responseBody = await response.transform(utf8.decoder).join();
       var decoded = json.decode(responseBody);
       var url = decoded['message'];
-      print("Print from core.helper.model $imageUrl");
       imageUrl = url;
 
     } catch (exception) {
-      print(exception);
+      var logger = Logger(
+        printer: PrettyPrinter(),
+      );
+      logger.d('Error! Try again');
     }
   }
 }
