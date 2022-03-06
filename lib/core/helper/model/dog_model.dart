@@ -3,14 +3,13 @@ import 'dart:convert';
 
 import 'dart:io';
 
-class Dog {
+class DogModel {
   final String name;
-  final String location;
   final String description;
   String ?imageUrl;
   int rating = 10;
 
-  Dog(this.name, this.location, this.description);
+  DogModel(this.name,this.description);
 
   Future getImageUrl() async {
     if (imageUrl != null) {
@@ -25,7 +24,7 @@ class Dog {
       var responseBody = await response.transform(utf8.decoder).join();
       var decoded = json.decode(responseBody);
       var url = decoded['message'];
-      print("Print from model $imageUrl");
+      print("Print from core.helper.model $imageUrl");
       imageUrl = url;
 
     } catch (exception) {

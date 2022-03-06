@@ -1,8 +1,9 @@
-import 'package:dog_api/home_view.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dog_api/ui/views/widget/app_colors.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'my_router.dart';
+
+void main() async {
   runApp(MyApp());
 }
 
@@ -11,10 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Dog List',
-      theme: ThemeData(brightness: Brightness.dark),
-      home: HomeView(),
+      title: 'Dog API List',
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: primaryColor,
+        canvasColor: lightShadowColor,
+      ),
+      initialRoute: '/',
+      onGenerateRoute: MyRouter.generateRoute,
     );
   }
 }
-

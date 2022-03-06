@@ -1,26 +1,27 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dog_api/dog_model.dart';
+import 'package:dog_api/core/helper/model/dog_model.dart';
 import 'package:flutter/material.dart';
 
-import 'detail_page.dart';
+import '../detail_view.dart';
+import 'app_colors.dart';
 
-class DogCard extends StatefulWidget {
-  final Dog dog;
+class CardWidget extends StatefulWidget {
+  final DogModel dog;
 
-  const DogCard(this.dog, {Key? key}) : super(key: key);
+  const CardWidget(this.dog, {Key? key}) : super(key: key);
 
   @override
-  DogCardState createState() {
-    return DogCardState(dog);
+  CardWidgetState createState() {
+    return CardWidgetState(dog);
   }
 }
 
-class DogCardState extends State<DogCard> {
-  Dog dog;
+class CardWidgetState extends State<CardWidget> {
+  DogModel dog;
 
   String? renderUrl;
 
-  DogCardState(this.dog);
+  CardWidgetState(this.dog);
 
   @override
   void initState() {
@@ -39,9 +40,7 @@ class DogCardState extends State<DogCard> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return DetailPage(dog);
-        }));
+        Navigator.pushNamed(context, "details",arguments:dog );
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -51,9 +50,9 @@ class DogCardState extends State<DogCard> {
             children: <Widget>[
               Positioned(top: 7.5, child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: widgetBgColor,
                   border: Border.all(
-                    color: Colors.blue ,
+                    color: primaryColor,
                     width: 2.0 ,
                   ),
                   borderRadius: BorderRadius.circular(8),
