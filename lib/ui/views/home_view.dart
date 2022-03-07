@@ -15,60 +15,80 @@ class HomeView extends StatefulWidget {
 
 class _HomeView extends State<HomeView> {
   var initialDoggos = <DogModel>[]
-    ..add(DogModel('Ruby',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
+    ..add(DogModel('Affenpinscher',
+        'The Affenpinscher: loyal, curious, and famously amusing; this almost-human toy dog is fearless'))
+    ..add(DogModel('Afghan Hound','The Afghan Hound is an aloof and dignified aristocrat of sublime beauty.'))
+    ..add(DogModel('Airedale Terrier','His size, strength, and unflagging spirit have earned the Airedale Terrier the nickname “The King'))
+    ..add(DogModel('Akita',  'Akitas are muscular, double-coated dogs of ancient Japanese lineage famous'))
+    ..add(DogModel('Alaskan Klee Kai', 'The Alaskan Klee Kai is a small-sized companion dog that is alert, energetic'))
+    ..add(DogModel('Alaskan Malamute',
+        'An immensely strong, heavy-duty worker of spitz type, the Alaskan Malamute'))
+    ..add(DogModel('American Bulldog','American Bulldogs are a well-balanced athletic dog that demonstrate great strength, '))
+    ..add(DogModel('American English Coonhound','These sleek and racy, lean but muscular hounds work dusk to dawn in pursuit of the wily '))
+    ..add(DogModel('American Eskimo Dog',  'The American Eskimo Dog combines striking good looks with a quick and clever mind in a total'))
     ..add(DogModel('Buddy', 'A Very Good Boy'))
     ..add(DogModel('Ruby',
         'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
-    ..add(DogModel('Buddy', 'A Very Good Boy'))..add(DogModel('Ruby',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
+    ..add(DogModel('Buddy', 'A Very Good Boy'))
+    ..add(DogModel('Affenpinscher',
+        'The Affenpinscher: loyal, curious, and famously amusing; this almost-human toy dog is fearless'))
+    ..add(DogModel('Afghan Hound','The Afghan Hound is an aloof and dignified aristocrat of sublime beauty.'))
+    ..add(DogModel('Airedale Terrier','His size, strength, and unflagging spirit have earned the Airedale Terrier the nickname “The King'))
+    ..add(DogModel('Akita',  'Akitas are muscular, double-coated dogs of ancient Japanese lineage famous'))
+    ..add(DogModel('Alaskan Klee Kai', 'The Alaskan Klee Kai is a small-sized companion dog that is alert, energetic'))
+    ..add(DogModel('Alaskan Malamute',
+        'An immensely strong, heavy-duty worker of spitz type, the Alaskan Malamute'))
+    ..add(DogModel('American Bulldog','American Bulldogs are a well-balanced athletic dog that demonstrate great strength, '))
+    ..add(DogModel('American English Coonhound','These sleek and racy, lean but muscular hounds work dusk to dawn in pursuit of the wily '))
+    ..add(DogModel('American Eskimo Dog',  'The American Eskimo Dog combines striking good looks with a quick and clever mind in a total'))
     ..add(DogModel('Buddy', 'A Very Good Boy'))
     ..add(DogModel('Ruby',
         'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
+    ..add(DogModel('Buddy', 'A Very Good Boy'))
+    ..add(DogModel('Affenpinscher',
+        'The Affenpinscher: loyal, curious, and famously amusing; this almost-human toy dog is fearless'))
+    ..add(DogModel('Afghan Hound','The Afghan Hound is an aloof and dignified aristocrat of sublime beauty.'))
+    ..add(DogModel('Airedale Terrier','His size, strength, and unflagging spirit have earned the Airedale Terrier the nickname “The King'))
+    ..add(DogModel('Akita',  'Akitas are muscular, double-coated dogs of ancient Japanese lineage famous'))
+    ..add(DogModel('Alaskan Klee Kai', 'The Alaskan Klee Kai is a small-sized companion dog that is alert, energetic'))
+    ..add(DogModel('Alaskan Malamute',
+        'An immensely strong, heavy-duty worker of spitz type, the Alaskan Malamute'))
+    ..add(DogModel('American Bulldog','American Bulldogs are a well-balanced athletic dog that demonstrate great strength, '))
+    ..add(DogModel('American English Coonhound','These sleek and racy, lean but muscular hounds work dusk to dawn in pursuit of the wily '))
+    ..add(DogModel('American Eskimo Dog',  'The American Eskimo Dog combines striking good looks with a quick and clever mind in a total'))
     ..add(DogModel('Buddy', 'A Very Good Boy'))
     ..add(DogModel('Ruby',
         'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
-    ..add(DogModel('Buddy', 'A Very Good Boy'))..add(DogModel('Ruby',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
-    ..add(DogModel('Buddy', 'A Very Good Boy'))..add(DogModel('Ruby',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
-    ..add(DogModel('Buddy', 'A Very Good Boy'))..add(DogModel('Ruby',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
-    ..add(DogModel('Buddy', 'A Very Good Boy'))..add(DogModel('Ruby',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
+    ..add(DogModel('Buddy', 'A Very Good Boy'))
+    ..add(DogModel('Affenpinscher',
+        'The Affenpinscher: loyal, curious, and famously amusing; this almost-human toy dog is fearless'))
+    ..add(DogModel('Afghan Hound','The Afghan Hound is an aloof and dignified aristocrat of sublime beauty.'))
+    ..add(DogModel('Airedale Terrier','His size, strength, and unflagging spirit have earned the Airedale Terrier the nickname “The King'))
+    ..add(DogModel('Akita',  'Akitas are muscular, double-coated dogs of ancient Japanese lineage famous'))
+    ..add(DogModel('Alaskan Klee Kai', 'The Alaskan Klee Kai is a small-sized companion dog that is alert, energetic'))
+    ..add(DogModel('Alaskan Malamute',
+        'An immensely strong, heavy-duty worker of spitz type, the Alaskan Malamute'))
+    ..add(DogModel('American Bulldog','American Bulldogs are a well-balanced athletic dog that demonstrate great strength, '))
+    ..add(DogModel('American English Coonhound','These sleek and racy, lean but muscular hounds work dusk to dawn in pursuit of the wily '))
+    ..add(DogModel('American Eskimo Dog',  'The American Eskimo Dog combines striking good looks with a quick and clever mind in a total'))
     ..add(DogModel('Buddy', 'A Very Good Boy'))
     ..add(DogModel('Ruby',
         'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
-    ..add(DogModel('Rex','A Very Good Boy'))
-    ..add(DogModel('Rod Stewart','A Very Good Boy'))
-    ..add(DogModel('Herbert',  'A Very Good Boy'))
+    ..add(DogModel('Buddy', 'A Very Good Boy'))
+    ..add(DogModel('Affenpinscher',
+        'The Affenpinscher: loyal, curious, and famously amusing; this almost-human toy dog is fearless'))
+    ..add(DogModel('Afghan Hound','The Afghan Hound is an aloof and dignified aristocrat of sublime beauty.'))
+    ..add(DogModel('Airedale Terrier','His size, strength, and unflagging spirit have earned the Airedale Terrier the nickname “The King'))
+    ..add(DogModel('Akita',  'Akitas are muscular, double-coated dogs of ancient Japanese lineage famous'))
+    ..add(DogModel('Alaskan Klee Kai', 'The Alaskan Klee Kai is a small-sized companion dog that is alert, energetic'))
+    ..add(DogModel('Alaskan Malamute',
+        'An immensely strong, heavy-duty worker of spitz type, the Alaskan Malamute'))
+    ..add(DogModel('American Bulldog','American Bulldogs are a well-balanced athletic dog that demonstrate great strength, '))
+    ..add(DogModel('American English Coonhound','These sleek and racy, lean but muscular hounds work dusk to dawn in pursuit of the wily '))
+    ..add(DogModel('American Eskimo Dog',  'The American Eskimo Dog combines striking good looks with a quick and clever mind in a total'))
+    ..add(DogModel('Buddy', 'A Very Good Boy'))
+    ..add(DogModel('Ruby',
+        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
     ..add(DogModel('Buddy', 'A Very Good Boy'));
 
   @override
